@@ -14,4 +14,4 @@ le processus de developement de cette application est basé sur un langage de pr
 -le BootStrap pour le materiel design
 -Serveur de base de donnée MYSQL pour le stockage de donnees 
 
-ce Fichier sera modifier en fure et mesure en cour de la realisation de cette application pour montrer toute etape qui a ete faite acompagnons de toute capture necessaire pour bien demontrer son developpement  
+ce Fichier sera modifier en fure et a mesure en cours de la realisation de cette application pour montrer toute etape qui a ete faite acompagnons de toute capture necessaire pour bien demontrer son developpement et sa mise en oeuvre  
