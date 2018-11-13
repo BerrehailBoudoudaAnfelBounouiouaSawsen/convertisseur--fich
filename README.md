@@ -13,9 +13,13 @@ L'application pemettra a un utilisateur de convertire un document d'un Format ve
 ce Fichier sera modifier en fure et a mesure en cours de la realisation de cette application pour montrer toute etape qui a ete faite acompagnons de toute capture necessaire pour bien demontrer son developpement et sa mise en oeuvre 
 
 ## Developement:
+
 ##Coté Serveur: 
+
 Back-end :Spring webflux
+
 ##Coté Client
+
 Front-end(client):materiel design boostrap+promise(async javascript)
 
 *La conversion doit etre online et a la fin y'aura un envoi d'email qui contient l'URL de ficher apres sa conversion
@@ -30,46 +34,82 @@ On a utilisé un web service qui existe déja qui travaille avec le REST
     <title>Test REST Web API</title>
 </head>
 <body>
-     <form action="#" method="post" enctype="multipart/form-data" name="conversionform" id="conversionform">
+    
+    <form action="#" method="post" enctype="multipart/form-data" name="conversionform" id="conversionform">
+         
          <p>API Key: <input id="key" name="key" type="text" /></p>
-         <p>Local file: <input id="file" name="file" type="file" /></p>
-         <p>Target format:
+        
+        <p>Local file: <input id="file" name="file" type="file" /></p>
+        
+        <p>Target format:
+             
              <select name="targetformat" id="targetformat"">
-                 <option value="pdf" selected >PDF</option>
-                 <option value="docx">DOCX</option>
-                 <option value="doc">DOC</option>
-                 <option value="rtf">RTF</option>
-                 <option value="pptx">PPTX</option>
-                 <option value="epub">EPUB</option>
-                 <option value="html">HTML</option>
-                 <option value="txt">TXT</option>
-                 <option value="jpg">JPG</option>
-                 <option value="tif">TIFF</option>
-                 <option value="png">PNG</option>
-             </select>
-         </p>
-         <p><input type="button" value="Convert" onclick="convertpdfform()" /></p>
-         <p><span id="resulttext">Conversion Results: </span></p>
-     </form>
+                
+                <option value="pdf" selected >PDF</option>
+                
+                <option value="docx">DOCX</option>
+               
+               <option value="doc">DOC</option>
+                
+                <option value="rtf">RTF</option>
+                
+                <option value="pptx">PPTX</option>
+               
+               <option value="epub">EPUB</option>
+               
+               <option value="html">HTML</option>
+               
+               <option value="txt">TXT</option>
+               
+               <option value="jpg">JPG</option>
+               
+               <option value="tif">TIFF</option>
+               
+               
+               <option value="png">PNG</option>
+           
+           </select>
+        
+        </p>
+        
+        <p><input type="button" value="Convert" onclick="convertpdfform()" /></p>
+        
+        <p><span id="resulttext">Conversion Results: </span></p>
+    
+    
+   </form>
+
 <script src="/js/jquery.js"></script>
+
 <script src="/js/jquery.form.js"></script>
+
 <script type="text/javascript">
-  $(document).ready(function() {
+ 
+ $(document).ready(function() {
   });
-  function showResponse(responseText, statusText, xhr, $form)  {
-    resulttext.innerHTML=responseText;
+ 
+ function showResponse(responseText, statusText, xhr, $form)  {
+  
+  resulttext.innerHTML=responseText;
   }
   function showError(responseText, statusText, xhr, $form)  {
   }
   function convertpdfform() {
-    options = {
-      success:       showResponse, 
-      error:         showError,
+   
+   options = {
+    
+    success:       showResponse, 
+    
+    error:         showError,
+      
       url:       "//s2.aconvert.com/convert/api-win.php",
     };
-    $('#conversionform').ajaxForm(options);
-    $('#conversionform').ajaxSubmit(options);
-    return false;
+   
+   $('#conversionform').ajaxForm(options);
+   
+   $('#conversionform').ajaxSubmit(options);
+   
+   return false;
   }
 </script>
 </body>
