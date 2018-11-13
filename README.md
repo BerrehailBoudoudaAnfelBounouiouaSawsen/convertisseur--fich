@@ -87,14 +87,20 @@ On a utilisé un web service qui existe déja qui travaille avec le REST
 
 <script src="/js/jquery.js"></script>
 
+
+
 <script src="/js/jquery.form.js"></script>
+
+
 
 <script type="text/javascript">
  
 
+
 $(document).ready(function() {
   
   });
+  
  
  function showResponse(responseText, statusText, xhr, $form)  {
   
@@ -108,21 +114,35 @@ $(document).ready(function() {
  function convertpdfform() {
    
   
-  options = {
+ 
+ options = {
     
-    success:       showResponse, 
+   
+   success:       showResponse, 
     
-    error:         showError,
+   
+   error:         showError,
       
-      url:       "//s2.aconvert.com/convert/api-win.php",
+    
+    
+    url:       "//s2.aconvert.com/convert/api-win.php",
+    
+    
     };
    
-   $('#conversionform').ajaxForm(options);
+ 
+ 
+ $('#conversionform').ajaxForm(options);
    
-   $('#conversionform').ajaxSubmit(options);
+  
+  
+  $('#conversionform').ajaxSubmit(options);
    
-   return false;
-  }
+  
+  return false;
+ 
+ }
+
 
 </script>
 
