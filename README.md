@@ -13,15 +13,16 @@ L'application pemettra a un utilisateur de convertire un document d'un Format ve
 ce Fichier sera modifier en fure et a mesure en cours de la realisation de cette application pour montrer toute etape qui a ete faite acompagnons de toute capture necessaire pour bien demontrer son developpement et sa mise en oeuvre 
 
 ## Developement:
-#Coté Serveur: 
+##Coté Serveur: 
 Back-end :Spring webflux
+##Coté Client
 Front-end(client):materiel design boostrap+promise(async javascript)
 
---La conversion doit etre online et a la fin y'aura un envoi d'email qui contient l'URL de ficher apres sa conversion
+*La conversion doit etre online et a la fin y'aura un envoi d'email qui contient l'URL de ficher apres sa conversion
 
-Limite de conversion (max=2)
+*Limite de conversion (max=2)
 
-On  a utilisé un web service qui existe déja qui travaille avec le REST 
+On a utilisé un web service qui existe déja qui travaille avec le REST 
 
 #Les exemples de code source HTML permettant d’utiliser l’API Web REST. Vous pouvez enregistrer les codes source dans un fichier html et le tester:
 <html>
