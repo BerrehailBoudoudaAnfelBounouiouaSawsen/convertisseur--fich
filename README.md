@@ -9,9 +9,13 @@ L'application pemettra a un utilisateur de convertire un document d'un Format ve
 -service qui permet de recuperer information concernant l'etat de document d'utilisateur
 -service de recuperation localisation de fichier apres sa conversion 
 
-le processus de developement de cette application est basé sur un langage de programmation qui est le Kotlin avec utilisation :
-- le framework SpringBoot
--le BootStrap pour le materiel design
--Serveur de base de donnée MYSQL pour le stockage de donnees 
+ce Fichier sera modifier en fure et a mesure en cours de la realisation de cette application pour montrer toute etape qui a ete faite acompagnons de toute capture necessaire pour bien demontrer son developpement et sa mise en oeuvre 
 
-ce Fichier sera modifier en fure et a mesure en cours de la realisation de cette application pour montrer toute etape qui a ete faite acompagnons de toute capture necessaire pour bien demontrer son developpement et sa mise en oeuvre  
+## Developement:
+#Coté Serveur: 
+Back-end :Spring webflux
+Front-end(client):materiel design boostrap+promise(async javascript)
+
+La conversion doit etre online et a la fin y'aura un envoi d'email qui contient l'URL de ficher apres sa conversion
+
+Limite de conversion (max=2)
