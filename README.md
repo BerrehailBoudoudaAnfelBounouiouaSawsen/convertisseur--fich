@@ -29,10 +29,15 @@ Front-end(client):materiel design boostrap+promise(async javascript)
 On a utilisé un web service qui existe déja qui travaille avec le REST 
 
 #Les exemples de code source HTML permettant d’utiliser l’API Web REST. Vous pouvez enregistrer les codes source dans un fichier html et le tester:
+
 <html>
+
 <head>
+    
     <title>Test REST Web API</title>
+
 </head>
+
 <body>
     
     <form action="#" method="post" enctype="multipart/form-data" name="conversionform" id="conversionform">
@@ -79,24 +84,31 @@ On a utilisé un web service qui existe déja qui travaille avec le REST
     
    </form>
 
+
 <script src="/js/jquery.js"></script>
 
 <script src="/js/jquery.form.js"></script>
 
 <script type="text/javascript">
  
- $(document).ready(function() {
+
+$(document).ready(function() {
+  
   });
  
  function showResponse(responseText, statusText, xhr, $form)  {
   
+  
   resulttext.innerHTML=responseText;
   }
-  function showError(responseText, statusText, xhr, $form)  {
+ 
+ function showError(responseText, statusText, xhr, $form)  {
   }
-  function convertpdfform() {
+ 
+ function convertpdfform() {
    
-   options = {
+  
+  options = {
     
     success:       showResponse, 
     
@@ -111,7 +123,12 @@ On a utilisé un web service qui existe déja qui travaille avec le REST
    
    return false;
   }
+
 </script>
+
+
 </body>
+
 </html>
- ce qui nous reste c'est bien comment avoir le resultat de la convertion
+
+ce qui nous reste c'est bien comment avoir le resultat de la convertion
