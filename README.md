@@ -14,141 +14,38 @@ ce Fichier sera modifier en fure et a mesure en cours de la realisation de cette
 
 ## Developement:
 
-##Coté Serveur: 
+##Serveur : Spring webflux (netry reactive):apres son demarrage ce serveur va creer une map(cle,value) dont la clé=adress du client (ip ou nom du pc) et value=nombre de conversion (max=2)
 
-Back-end :Spring webflux
+**un serveur qui travaille avec REST il reponds sur 3 url de client:
+URL=/checkPermission :quand le client demande url(http://ip:/checkPermission) serveur reçoit la requette et il verra ip de client et il consulte map pour voir si il est arrivé au max ou pas encore (si c'est pas encore il fera nombre conversion+1) et il envoi au client message"grant" ou message "denied"
 
-##Coté Client
+**URL=/convert : serveur reçoit ce lien avec url de fichier apres conversion +email de client apres il envoi un email a cet adress
 
-Front-end(client):materiel design boostrap+promise(async javascript)
+**url=http://ip:1999 page index.html le serveur va l'envoyer au client qui se connecte avec lui
 
-*La conversion doit etre online et a la fin y'aura un envoi d'email qui contient l'URL de ficher apres sa conversion
+**Pour notre Serveur on l'a fait avec Spring webflux(asynchrone+nion-blocking) et langage de programmation Kotlin
 
-*Limite de conversion (max=2)
+**coté design un dossier s'appel design contient 3 repertoires qui sont :
 
-On a utilisé un web service qui existe déja qui travaille avec le REST 
+1)**CSS(stylesheet)
+2)js:fichier script (material kit-ui +bootstrap+quelques tools comme waitMe+toaststr)
+3)asset:les icones+les images
 
-#Les exemples de code source HTML permettant d’utiliser l’API Web REST. Vous pouvez enregistrer les codes source dans un fichier html et le tester:
+**Fichier de configuration de serveur(application.yml) contient port de serveur=9999 +mon email
 
-<html>
+##Client: interface web (index.html)+les evenements(click sur boutton ou lien ou ...)
+on l'a fait avec html5+css3+materiel kit ui+promise (asycnhrone javascript)+jquery
 
-<head>
-    
-    <title>Test REST Web API</title>
-
-</head>
-
-<body>
-    
-    <form action="#" method="post" enctype="multipart/form-data" name="conversionform" id="conversionform">
-         
-         <p>API Key: <input id="key" name="key" type="text" /></p>
-        
-        <p>Local file: <input id="file" name="file" type="file" /></p>
-        
-        <p>Target format:
-             
-             <select name="targetformat" id="targetformat"">
-                
-                <option value="pdf" selected >PDF</option>
-                
-                <option value="docx">DOCX</option>
-               
-               <option value="doc">DOC</option>
-                
-                <option value="rtf">RTF</option>
-                
-                <option value="pptx">PPTX</option>
-               
-               <option value="epub">EPUB</option>
-               
-               <option value="html">HTML</option>
-               
-               <option value="txt">TXT</option>
-               
-               <option value="jpg">JPG</option>
-               
-               <option value="tif">TIFF</option>
-               
-               
-               <option value="png">PNG</option>
-           
-           </select>
-        
-        </p>
-        
-        <p><input type="button" value="Convert" onclick="convertpdfform()" /></p>
-        
-        <p><span id="resulttext">Conversion Results: </span></p>
-    
-    
-   </form>
+**Client apres sa connexion il choisit un fichier  + format de conversion +email(facultatif) et il va cliquer sur le bouton "Convert" ares il va recevoir :
+message=denied-->afficher un message jeune indique arrivéé au limit(2) et ajouter ce message au Service Log (calcule de la durée d'excution de chaque etape)
 
 
-<script src="/js/jquery.js"></script>
+###Demonstration:
+
+la page index.html de notre application
 
 
 
-<script src="/js/jquery.form.js"></script>
 
 
 
-<script type="text/javascript">
- 
-
-
-$(document).ready(function() {
-  
-  });
-  
- 
- function showResponse(responseText, statusText, xhr, $form)  {
-  
-  
-  resulttext.innerHTML=responseText;
-  }
- 
- function showError(responseText, statusText, xhr, $form)  {
-  }
- 
- function convertpdfform() {
-   
-  
- 
- options = {
-    
-   
-   success:       showResponse, 
-    
-   
-   error:         showError,
-      
-    
-    
-    url:       "//s2.aconvert.com/convert/api-win.php",
-    
-    
-    };
-   
- 
- 
- $('#conversionform').ajaxForm(options);
-   
-  
-  
-  $('#conversionform').ajaxSubmit(options);
-   
-  
-  return false;
- 
- }
-
-
-</script>
-
-
-</body>
-
-</html>
-
-ce qui nous reste c'est bien comment avoir le resultat de la convertion
