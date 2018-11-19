@@ -40,7 +40,13 @@ on l'a fait avec html5+css3+materiel kit ui+promise (asycnhrone javascript)+jque
 message=denied-->afficher un message jeune indique arrivéé au limit(2) et ajouter ce message au Service Log (calcule de la durée d'excution de chaque etape)
 
 
+**Notre convertisseur fichier a 5 formats :jpg ,txt;docx,html,pdf,xls 
+
+
 ###Demonstration:
+
+**pour execution de application on aura besoin d'internet et Serveur  Rest gratuit qui se trouve ici http://s2.aconvert.com/convert/api-win.php 
+https://www.aconvert.com/
 
 **la page index.html de notre application
 
@@ -60,6 +66,18 @@ message=denied-->afficher un message jeune indique arrivéé au limit(2) et ajou
 ![46446932_347734482710232_846150111120588800_n](https://user-images.githubusercontent.com/25961912/48728287-66d5e000-ebe9-11e8-87c1-849843b5e1fa.jpg)
 
 ![46472520_484870858672814_55910866352078848_n](https://user-images.githubusercontent.com/25961912/48728343-8bca5300-ebe9-11e8-8f0e-2c9e7e09682d.jpg)
+
+**La reception de fichier apres conversion de Format :
+
+**Docx
+![docx](https://user-images.githubusercontent.com/25961912/48728823-e6b07a00-ebea-11e8-8864-1acbd931e312.png)
+
+**Mp3
+![mp3](https://user-images.githubusercontent.com/25961912/48728905-2a0ae880-ebeb-11e8-8d89-2b3d1b0d09b5.png)
+
+
+
+
 
 
 
