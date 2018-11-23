@@ -19,7 +19,7 @@ ce Fichier sera modifier en fure et a mesure en cours de la realisation de cette
 
 ![repertoire](https://user-images.githubusercontent.com/25961912/48957708-29d25c00-ef0f-11e8-809b-12fd670b5e07.PNG)
 
-**Le repertoire Bean:
+**Le Repertoire Bean:
 de sa part contient deux classes:
 
 **classe Convertion predicat:condition de la conversion :c'est une map sa clé est le port sa valeur est nombre de conversion
@@ -38,7 +38,8 @@ URL=/checkPermission :quand le client demande url(http://ip:/checkPermission) se
 
 **url=http://ip:1999 page index.html le serveur va l'envoyer au client qui se connecte avec lui
 
-**Repertoire Util: different lien proposers par l'application 
+**le Repertoire Util: 
+CloudConvertionApplication: different lien proposers par l'application 
 
 
 **coté design un dossier s'appel design contient 3 repertoires qui sont :
