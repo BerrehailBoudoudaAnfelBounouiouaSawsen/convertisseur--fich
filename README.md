@@ -36,7 +36,7 @@ URL=/checkPermission :quand le client demande url(http://ip:/checkPermission) se
 
 **URL=/convert : serveur reçoit ce lien avec url de fichier apres conversion +email de client apres il envoi un email a cet adress
 
-**url=http://ip:1999 page index.html le serveur va l'envoyer au client qui se connecte avec lui
+**url=http://localhost:9999 page index.html le serveur va l'envoyer au client qui se connecte avec lui
 
 **le Repertoire Util: 
 CloudConvertionApplication: different lien proposers par l'application 
@@ -130,6 +130,19 @@ comme ça on a deux solution soit executer notre application de local avec le po
 ** le lien 
 https://anfel-suzi.cfapps.io
  **permet l'acces directe au fichier executable 
+ 
+ **Dans le cloud avec le lien https://anfel-suzi.cfapps.io on trouvera le fichier converti directement sur la page on a qu'a faire un download 
+ 
+ **Au cas d'acomplissement de tache de conversion en utilisant http://localhost:9999 on aura ça:
+ ![send email](https://user-images.githubusercontent.com/25961912/48958764-28586200-ef16-11e8-9428-ded1c20bc481.png)
+**Au cas d'echec qui est depassement de limitation de conversion on trouvera ça
+![maximum 2 convertions](https://user-images.githubusercontent.com/25961912/48958819-6fdeee00-ef16-11e8-949a-4b0cf503e807.png)
+
+
+![is deleted](https://user-images.githubusercontent.com/25961912/48958839-884f0880-ef16-11e8-81ea-e74efaf2a0ed.png)
+
+
+
 
 
 
