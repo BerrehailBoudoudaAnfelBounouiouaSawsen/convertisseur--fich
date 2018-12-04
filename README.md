@@ -13,7 +13,7 @@
 # 1-Architecture de L'application:
 
 ## 1-1 Coté Base de données:
- > Pas de base de donneés parceque on a pas besoin de garder la trace.
+ > Pas de base de donneés parceque on a pas besoin de garder la trace et une fois il tappe son email apres la conversion l'url de fichier converti sera directement envoyé dans sa boite mail.
  
  ## 1-2 coté Implimentation et Outils:
 
