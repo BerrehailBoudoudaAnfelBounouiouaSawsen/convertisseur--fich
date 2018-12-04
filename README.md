@@ -64,8 +64,10 @@ URL=/checkPermission :quand le client demande url(http://ip:/checkPermission) se
 > Un dossier s'appel design contient 3 repertoires qui sont :
 
 ### CSS(stylesheet).
-### js:fichier script (material kit-ui +bootstrap+quelques tools comme waitMe+toaststr).
-### asset:les icones+les images.
+### js:
+> Fichier script (material kit-ui +bootstrap+quelques tools comme waitMe+toaststr).
+### asset:
+> Les icones+les images.
 
 ## Fichier de configuration de serveur(application.yml) contient port de serveur=9999 +mon email.
 
@@ -77,7 +79,8 @@ Fait html5+css3+materiel kit ui+promise (asycnhrone javascript)+jquery.
 > Client apres sa connexion il choisit un fichier  + format de conversion +email(facultatif) et il va cliquer sur le bouton "Convert" ares il va recevoir :
 message=denied-->afficher un message jeune indique arrivéé au limit(2) et ajouter ce message au Service Log (calcule de la durée d'excution de chaque etape).
 
-> Notre convertisseur fichier a 5 formats :jpg ,txt;docx,html,pdf,xls,mp3,bmp,mp4.
+> Notre convertisseur
+fichier a 5 formats :jpg ,txt;docx,html,pdf,xls,mp3,bmp,mp4.
 
 
 # Demonstration:
