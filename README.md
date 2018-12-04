@@ -17,27 +17,37 @@
  
  ## 1-2 coté Implimentation et Outils:
 
-## Serveur : Spring webflux (netry reactive):apres son demarrage ce serveur va creer une map(cle,value) dont la clé=adress du client (ip ou nom du pc) et value=nombre de conversion (max=2).
+## Serveur : 
+> Spring webflux (netry reactive):apres son demarrage ce serveur va creer une map(cle,value) dont la clé=adress du client (ip ou nom du pc) et value=nombre de conversion (max=2).
 
- > Pour notre Serveur on l'a fait avec Spring webflux(asynchrone+nion-blocking) et langage de programmation Kotlin.
+> Pour notre Serveur on l'a fait avec Spring webflux(asynchrone+nion-blocking) et langage de programmation Kotlin.
 
-## L'application dispose de 3 repetoire qui sont :Bean ,Service ,util
+## L'application dispose de 3 repetoire qui sont:
+> Bean.
+> Service. 
+> Util.
 
 ![repertoire](https://user-images.githubusercontent.com/25961912/48957708-29d25c00-ef0f-11e8-809b-12fd670b5e07.PNG)
 
 ## Le Repertoire Bean:
 De sa part contient deux classes:
 
-> Classe Convertion predicat:condition de la conversion :c'est une map sa clé est le port sa valeur est nombre de conversion.
+### Classe Convertion predicat:
 
-> Classe EmailReponseModel: la réponse que le client reçoit dans son mail ça contient url de fichier.
+> Condition de la conversion :c'est une map sa clé est le port sa valeur est nombre de conversion.
+
+### Classe EmailReponseModel:
+
+> la réponse que le client reçoit dans son mail ça contient url de fichier.
 
 ## Le Repertoire Service:
-> Classe RouterHandler : classe composant of springboot :comment gerer les URL
+### Classe RouterHandler :
+> Classe composant of springboot :comment gerer les URL
 /check permission :deja predefini en detail en bas 
 
 
-## Un serveur qui travaille avec REST il reponds sur 3 url de client:
+## Un serveur:
+> Qui travaille avec REST il reponds sur 3 url de client:
 URL=/checkPermission :quand le client demande url(http://ip:/checkPermission) serveur reçoit la requette et il verra ip de client et il consulte map pour voir si il est arrivé au max ou pas encore (si c'est pas encore il fera nombre conversion+1) et il envoi au client message"grant" ou message "denied"
 
 > URL=/convert : serveur reçoit ce lien avec url de fichier apres conversion +email de client apres il envoi un email a cet adress
@@ -45,7 +55,9 @@ URL=/checkPermission :quand le client demande url(http://ip:/checkPermission) se
 > url=http://localhost:9999 page index.html le serveur va l'envoyer au client qui se connecte avec lui
 
 ## le Repertoire Util: 
-CloudConvertionApplication: different lien proposers par l'application 
+### CloudConvertionApplication:
+
+> different lien proposers par l'application 
 
 
 ## Coté design
@@ -57,13 +69,13 @@ CloudConvertionApplication: different lien proposers par l'application
 
 ## Fichier de configuration de serveur(application.yml) contient port de serveur=9999 +mon email.
 
-## Client: interface web (index.html)+les evenements(click sur boutton ou lien ou ...)
-on l'a fait avec html5+css3+materiel kit ui+promise (asycnhrone javascript)+jquery.
+## Client:
+
+> Interface web (index.html)+les evenements(click sur boutton ou lien ou ...) :
+Fait html5+css3+materiel kit ui+promise (asycnhrone javascript)+jquery.
 
 > Client apres sa connexion il choisit un fichier  + format de conversion +email(facultatif) et il va cliquer sur le bouton "Convert" ares il va recevoir :
 message=denied-->afficher un message jeune indique arrivéé au limit(2) et ajouter ce message au Service Log (calcule de la durée d'excution de chaque etape).
-
-> Base de données: on a pas utiliser une base de données parceque une fois il tappe son email apres la conversion l'url de fichier converti sera directement envoyé dans sa boite mail.
 
 > Notre convertisseur fichier a 5 formats :jpg ,txt;docx,html,pdf,xls,mp3,bmp,mp4.
 
