@@ -1,37 +1,43 @@
 # convertisseur--fich
-Application de Conversion documents 
 
-L'application pemettra a un utilisateur de convertire un document d'un Format vers un autre format. et a fin de la realisation de cette application on va les decomposer en un ensemble de sous services (web service )qui sont :
+## Service utilisés 
 
--Service qui permet d'uploadera un document ou plutot un fichier dans web service
--Service qui permet de la conversion de document (Appél d'un web service)
--serice qui permet de retourner les notification acompagné de URL au client
+> L'application pemettra a un utilisateur de convertire un document d'un Format vers un autre format. et a fin de la realisation de cette application on va les decomposer en un ensemble de sous services (web service )qui sont :
 
-ce Fichier sera modifier en fure et a mesure en cours de la realisation de cette application pour montrer toute etape qui a ete faite acompagnons de toute capture necessaire pour bien demontrer son developpement et sa mise en oeuvre 
+-Service qui permet d'uploadera un document ou plutot un fichier dans web service.
+-Service qui permet de la conversion de document (Appél d'un web service).
+-serice qui permet de retourner les notification acompagné de URL au client.
 
-# Developement:
+> ce Fichier sera modifier en fure et a mesure en cours de la realisation de cette application pour montrer toute etape qui a ete faite acompagnons de toute capture necessaire pour bien demontrer son developpement et sa mise en oeuvre. 
 
-## Serveur : Spring webflux (netry reactive):apres son demarrage ce serveur va creer une map(cle,value) dont la clé=adress du client (ip ou nom du pc) et value=nombre de conversion (max=2)
+# 1-Architecture de L'application:
 
- > Pour notre Serveur on l'a fait avec Spring webflux(asynchrone+nion-blocking) et langage de programmation Kotlin
+## 1-1 Coté Base de données:
+ > Pas de base de donneés parceque on a pas besoin de garder la trace.
+ 
+ ## 1-2 coté Implimentation et Outils:
+
+## Serveur : Spring webflux (netry reactive):apres son demarrage ce serveur va creer une map(cle,value) dont la clé=adress du client (ip ou nom du pc) et value=nombre de conversion (max=2).
+
+ > Pour notre Serveur on l'a fait avec Spring webflux(asynchrone+nion-blocking) et langage de programmation Kotlin.
 
 ## L'application dispose de 3 repetoire qui sont :Bean ,Service ,util
 
 ![repertoire](https://user-images.githubusercontent.com/25961912/48957708-29d25c00-ef0f-11e8-809b-12fd670b5e07.PNG)
 
 ## Le Repertoire Bean:
-de sa part contient deux classes:
+De sa part contient deux classes:
 
-> classe Convertion predicat:condition de la conversion :c'est une map sa clé est le port sa valeur est nombre de conversion
+> Classe Convertion predicat:condition de la conversion :c'est une map sa clé est le port sa valeur est nombre de conversion.
 
-> classe EmailReponseModel: la réponse que le client reçoit dans son mail ça contient url de fichier
+> Classe EmailReponseModel: la réponse que le client reçoit dans son mail ça contient url de fichier.
 
 ## Le Repertoire Service:
-> classe RouterHandler : classe composant of springboot :comment gerer les URL
+> Classe RouterHandler : classe composant of springboot :comment gerer les URL
 /check permission :deja predefini en detail en bas 
 
 
-> un serveur qui travaille avec REST il reponds sur 3 url de client:
+## Un serveur qui travaille avec REST il reponds sur 3 url de client:
 URL=/checkPermission :quand le client demande url(http://ip:/checkPermission) serveur reçoit la requette et il verra ip de client et il consulte map pour voir si il est arrivé au max ou pas encore (si c'est pas encore il fera nombre conversion+1) et il envoi au client message"grant" ou message "denied"
 
 > URL=/convert : serveur reçoit ce lien avec url de fichier apres conversion +email de client apres il envoi un email a cet adress
@@ -42,23 +48,24 @@ URL=/checkPermission :quand le client demande url(http://ip:/checkPermission) se
 CloudConvertionApplication: different lien proposers par l'application 
 
 
-> coté design un dossier s'appel design contient 3 repertoires qui sont :
+## Coté design
+> Un dossier s'appel design contient 3 repertoires qui sont :
 
-### CSS(stylesheet)
-### js:fichier script (material kit-ui +bootstrap+quelques tools comme waitMe+toaststr)
-### asset:les icones+les images
+### CSS(stylesheet).
+### js:fichier script (material kit-ui +bootstrap+quelques tools comme waitMe+toaststr).
+### asset:les icones+les images.
 
-## Fichier de configuration de serveur(application.yml) contient port de serveur=9999 +mon email
+## Fichier de configuration de serveur(application.yml) contient port de serveur=9999 +mon email.
 
 ## Client: interface web (index.html)+les evenements(click sur boutton ou lien ou ...)
-on l'a fait avec html5+css3+materiel kit ui+promise (asycnhrone javascript)+jquery
+on l'a fait avec html5+css3+materiel kit ui+promise (asycnhrone javascript)+jquery.
 
 > Client apres sa connexion il choisit un fichier  + format de conversion +email(facultatif) et il va cliquer sur le bouton "Convert" ares il va recevoir :
-message=denied-->afficher un message jeune indique arrivéé au limit(2) et ajouter ce message au Service Log (calcule de la durée d'excution de chaque etape)
+message=denied-->afficher un message jeune indique arrivéé au limit(2) et ajouter ce message au Service Log (calcule de la durée d'excution de chaque etape).
 
-> Base de données: on a pas utiliser une base de données parceque une fois il tappe son email apres la conversion l'url de fichier converti sera directement envoyé dans sa boite mail
+> Base de données: on a pas utiliser une base de données parceque une fois il tappe son email apres la conversion l'url de fichier converti sera directement envoyé dans sa boite mail.
 
-> Notre convertisseur fichier a 5 formats :jpg ,txt;docx,html,pdf,xls,mp3,bmp,mp4
+> Notre convertisseur fichier a 5 formats :jpg ,txt;docx,html,pdf,xls,mp3,bmp,mp4.
 
 
 # Demonstration:
@@ -96,20 +103,20 @@ https://www.aconvert.com/
 
 ![capture](https://user-images.githubusercontent.com/25961912/48957092-73b94300-ef0b-11e8-822b-ac30124b904f.PNG)
 
-### apres generer jar pour lancer le service soit double clique sur le jar generé ou bien utiliser cmd en tappant cette commande :
+### Apres generer jar pour lancer le service soit double clique sur le jar generé ou bien utiliser cmd en tappant cette commande :
 C:\Users\Anfel\Desktop>java -jar cloud-convertion-1.0.1.jar
-comme ça on a deux solution soit executer notre application de local avec le port 9999 ou bien en acces sur le lien générer apartir de cloud pivotal
+comme ça on a deux solution soit executer notre application de local avec le port 9999 ou bien en acces sur le lien générer apartir de cloud pivotal;
 
 
 ### Pour ça on a utilisé le cloud de "Pivotal Web-service": on utilisé espace privé d'un amis pour pouvoir faire l'upload
 ![cloud](https://user-images.githubusercontent.com/25961912/48956846-1cff3980-ef0a-11e8-9eb2-a659b6d406e5.png)
 
 
-## a fin de le reussir on a installer la commande CLI pour utiliser le cmd "la commande cf login" ala connexion de site 
+## A fin de le reussir on a installer la commande CLI pour utiliser le cmd "la commande cf login" ala connexion de site 
 
 ![acces to pivotal-cloud](https://user-images.githubusercontent.com/25961912/48956935-88490b80-ef0a-11e8-8136-8e642f919fda.png)
 
-## tapper l'email et le mot de passe tout commme suit:
+## Tapper l'email et le mot de passe tout commme suit:
 
 ![cf push -bouilding](https://user-images.githubusercontent.com/25961912/48956995-dd851d00-ef0a-11e8-889d-7d1607bc8835.png)
 
