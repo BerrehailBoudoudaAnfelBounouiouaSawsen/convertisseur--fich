@@ -117,24 +117,24 @@ comme ça on a deux solution soit executer notre application de local avec le po
 
 ![yml](https://user-images.githubusercontent.com/25961912/48957241-46b96000-ef0c-11e8-82b8-2198c49b5348.png)
 
-> Maintenant avec cmd toujours on accede en chemain la ou il y'a le fichier .yml et on tappe cette commande "cf push" et le resultat sera :
+### Maintenant avec cmd toujours on accede en chemain la ou il y'a le fichier .yml et on tappe cette commande "cf push" et le resultat sera :
 ![deployement](https://user-images.githubusercontent.com/25961912/48957304-9861ea80-ef0c-11e8-81dc-05fbbc9f6ca1.png)
 
 ![deployement2](https://user-images.githubusercontent.com/25961912/48957317-b2033200-ef0c-11e8-8fb6-2858145d86da.png)
 ![deployement3](https://user-images.githubusercontent.com/25961912/48957343-e545c100-ef0c-11e8-894b-347ff5e0ad1a.png)
 
-> Et puis on accede notre espace sur Cloud pivotal on l'a trouve la bas 
+### Et puis on accede notre espace sur Cloud pivotal on l'a trouve la bas 
 ![pivotal](https://user-images.githubusercontent.com/25961912/48957386-35bd1e80-ef0d-11e8-81e5-af8bd1e8d634.png)
 
 ## le lien 
 https://anfel-suzi.cfapps.io
 ## permet l'acces directe au fichier executable 
  
- > Dans le cloud avec le lien https://anfel-suzi.cfapps.io on trouvera le fichier converti directement sur la page on a qu'a faire un download 
+### Dans le cloud avec le lien https://anfel-suzi.cfapps.io on trouvera le fichier converti directement sur la page on a qu'a faire un download 
  
-> Au cas d'acomplissement de tache de conversion en utilisant http://localhost:9999 on aura ça:
+### Au cas d'acomplissement de tache de conversion en utilisant http://localhost:9999 on aura ça:
  ![send email](https://user-images.githubusercontent.com/25961912/48958764-28586200-ef16-11e8-9428-ded1c20bc481.png)
-> Au cas d'echec qui est depassement de limitation de conversion on trouvera ça
+### Au cas d'echec qui est depassement de limitation de conversion on trouvera ça
 ![maximum 2 convertions](https://user-images.githubusercontent.com/25961912/48958819-6fdeee00-ef16-11e8-949a-4b0cf503e807.png)
 
 
