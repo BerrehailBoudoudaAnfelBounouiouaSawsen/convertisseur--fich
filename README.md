@@ -27,7 +27,7 @@ de sa part contient deux classes:
 > classe EmailReponseModel: la réponse que le client reçoit dans son mail ça contient url de fichier
 
 ## Le Repertoire Service:
-classe RouterHandler : classe composant of springboot :comment gerer les URL
+> classe RouterHandler : classe composant of springboot :comment gerer les URL
 /check permission :deja predefini en detail en bas 
 
 
@@ -42,11 +42,11 @@ URL=/checkPermission :quand le client demande url(http://ip:/checkPermission) se
 CloudConvertionApplication: different lien proposers par l'application 
 
 
-coté design un dossier s'appel design contient 3 repertoires qui sont :
+> coté design un dossier s'appel design contient 3 repertoires qui sont :
 
-1)CSS(stylesheet)
-2)js:fichier script (material kit-ui +bootstrap+quelques tools comme waitMe+toaststr)
-3)asset:les icones+les images
+### CSS(stylesheet)
+### js:fichier script (material kit-ui +bootstrap+quelques tools comme waitMe+toaststr)
+### asset:les icones+les images
 
 ## Fichier de configuration de serveur(application.yml) contient port de serveur=9999 +mon email
 
@@ -96,12 +96,12 @@ https://www.aconvert.com/
 
 ![capture](https://user-images.githubusercontent.com/25961912/48957092-73b94300-ef0b-11e8-822b-ac30124b904f.PNG)
 
-> apres generer jar pour lancer le service soit double clique sur le jar generé ou bien utiliser cmd en tappant cette commande :
+### apres generer jar pour lancer le service soit double clique sur le jar generé ou bien utiliser cmd en tappant cette commande :
 C:\Users\Anfel\Desktop>java -jar cloud-convertion-1.0.1.jar
 comme ça on a deux solution soit executer notre application de local avec le port 9999 ou bien en acces sur le lien générer apartir de cloud pivotal
 
 
-> Pour ça on a utilisé le cloud de "Pivotal Web-service": on utilisé espace privé d'un amis pour pouvoir faire l'upload
+### Pour ça on a utilisé le cloud de "Pivotal Web-service": on utilisé espace privé d'un amis pour pouvoir faire l'upload
 ![cloud](https://user-images.githubusercontent.com/25961912/48956846-1cff3980-ef0a-11e8-9eb2-a659b6d406e5.png)
 
 
